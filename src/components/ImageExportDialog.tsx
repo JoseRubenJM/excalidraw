@@ -4,9 +4,9 @@ import type { ActionManager } from "../actions/manager";
 import type { AppClassProperties, BinaryFiles, UIAppState } from "../types";
 
 import {
-  actionExportWithDarkMode,
+  // actionExportWithDarkMode,
   actionChangeExportBackground,
-  actionChangeExportEmbedScene,
+  // actionChangeExportEmbedScene,
   actionChangeExportScale,
   actionChangeProjectName,
 } from "../actions/actionExport";
@@ -35,8 +35,8 @@ import "./ImageExportDialog.scss";
 import { useAppProps } from "./App";
 import { FilledButton } from "./FilledButton";
 
-const supportsContextFilters =
-  "filter" in document.createElement("canvas").getContext("2d")!;
+// const supportsContextFilters =
+//   "filter" in document.createElement("canvas").getContext("2d")!;
 
 export const ErrorCanvasPreview = () => {
   return (
@@ -74,10 +74,10 @@ const ImageExportModal = ({
   const [exportWithBackground, setExportWithBackground] = useState(
     appState.exportBackground,
   );
-  const [exportDarkMode, setExportDarkMode] = useState(
-    appState.exportWithDarkMode,
-  );
-  const [embedScene, setEmbedScene] = useState(appState.exportEmbedScene);
+  // const [exportDarkMode, setExportDarkMode] = useState(
+  //   appState.exportWithDarkMode,
+  // );
+  // const [embedScene, setEmbedScene] = useState(appState.exportEmbedScene);
   const [exportScale, setExportScale] = useState(appState.exportScale);
 
   const previewRef = useRef<HTMLDivElement>(null);
@@ -183,7 +183,7 @@ const ImageExportModal = ({
             }}
           />
         </ExportSetting>
-        {supportsContextFilters && (
+        {/* {supportsContextFilters && (
           <ExportSetting
             label={t("imageExportDialog.label.darkMode")}
             name="exportDarkModeSwitch"
@@ -201,8 +201,8 @@ const ImageExportModal = ({
               }}
             />
           </ExportSetting>
-        )}
-        <ExportSetting
+        )} */}
+        {/* <ExportSetting
           label={t("imageExportDialog.label.embedScene")}
           tooltip={t("imageExportDialog.tooltip.embedScene")}
           name="exportEmbedSwitch"
@@ -219,7 +219,7 @@ const ImageExportModal = ({
               );
             }}
           />
-        </ExportSetting>
+        </ExportSetting> */}
         <ExportSetting
           label={t("imageExportDialog.label.scale")}
           name="exportScale"

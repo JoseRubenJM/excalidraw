@@ -24,7 +24,7 @@ import { t } from "../src/i18n";
 import {
   Excalidraw,
   defaultLang,
-  LiveCollaborationTrigger,
+  // LiveCollaborationTrigger,
 } from "../src/packages/excalidraw/index";
 import {
   AppState,
@@ -90,7 +90,7 @@ import {
   useHandleLibrary,
 } from "../src/data/library";
 import { AppMainMenu } from "./components/AppMainMenu";
-import { AppWelcomeScreen } from "./components/AppWelcomeScreen";
+// import { AppWelcomeScreen } from "./components/AppWelcomeScreen";
 import { AppFooter } from "./components/AppFooter";
 import { atom, Provider, useAtom, useAtomValue } from "jotai";
 import { useAtomWithInitialValue } from "../src/jotai";
@@ -731,12 +731,13 @@ const ExcalidrawWrapper = () => {
           if (isMobile || !collabAPI || isCollabDisabled) {
             return null;
           }
-          return (
-            <LiveCollaborationTrigger
-              isCollaborating={isCollaborating}
-              onSelect={() => setCollabDialogShown(true)}
-            />
-          );
+          return null;
+          // return (
+          //   <LiveCollaborationTrigger
+          //     isCollaborating={isCollaborating}
+          //     onSelect={() => setCollabDialogShown(true)}
+          //   />
+          // );
         }}
       >
         <AppMainMenu
@@ -744,10 +745,10 @@ const ExcalidrawWrapper = () => {
           isCollaborating={isCollaborating}
           isCollabEnabled={!isCollabDisabled}
         />
-        <AppWelcomeScreen
+        {/* <AppWelcomeScreen
           setCollabDialogShown={setCollabDialogShown}
           isCollabEnabled={!isCollabDisabled}
-        />
+        /> */}
         <OverwriteConfirmDialog>
           <OverwriteConfirmDialog.Actions.ExportToImage />
           <OverwriteConfirmDialog.Actions.SaveToDisk />

@@ -1,7 +1,7 @@
 import React from "react";
-import { PlusPromoIcon } from "../../src/components/icons";
+// import { PlusPromoIcon } from "../../src/components/icons";
 import { MainMenu } from "../../src/packages/excalidraw/index";
-import { LanguageList } from "./LanguageList";
+// import { LanguageList } from "./LanguageList";
 
 export const AppMainMenu: React.FC<{
   setCollabDialogShown: (toggle: boolean) => any;
@@ -10,20 +10,20 @@ export const AppMainMenu: React.FC<{
 }> = React.memo((props) => {
   return (
     <MainMenu>
-      <MainMenu.DefaultItems.LoadScene />
+      {/* <MainMenu.DefaultItems.LoadScene /> */}
       <MainMenu.DefaultItems.SaveToActiveFile />
-      <MainMenu.DefaultItems.Export />
+      {/* <MainMenu.DefaultItems.Export /> */}
       <MainMenu.DefaultItems.SaveAsImage />
-      {props.isCollabEnabled && (
+      {/* {props.isCollabEnabled && (
         <MainMenu.DefaultItems.LiveCollaborationTrigger
           isCollaborating={props.isCollaborating}
           onSelect={() => props.setCollabDialogShown(true)}
         />
-      )}
+      )} */}
 
       <MainMenu.DefaultItems.Help />
       <MainMenu.DefaultItems.ClearCanvas />
-      <MainMenu.Separator />
+      {/* <MainMenu.Separator />
       <MainMenu.ItemLink
         icon={PlusPromoIcon}
         href={`${
@@ -38,7 +38,7 @@ export const AppMainMenu: React.FC<{
       <MainMenu.DefaultItems.ToggleTheme />
       <MainMenu.ItemCustom>
         <LanguageList style={{ width: "100%" }} />
-      </MainMenu.ItemCustom>
+      </MainMenu.ItemCustom> */}
       <MainMenu.DefaultItems.ChangeCanvasBackground />
     </MainMenu>
   );

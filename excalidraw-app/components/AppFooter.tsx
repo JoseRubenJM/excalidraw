@@ -1,13 +1,13 @@
 import React from "react";
 import { Footer } from "../../src/packages/excalidraw/index";
-import { EncryptedIcon } from "./EncryptedIcon";
-import { ExcalidrawPlusAppLink } from "./ExcalidrawPlusAppLink";
-import { isExcalidrawPlusSignedUser } from "../app_constants";
+// import { EncryptedIcon } from "./EncryptedIcon";
+// import { ExcalidrawPlusAppLink } from "./ExcalidrawPlusAppLink";
+// import { isExcalidrawPlusSignedUser } from "../app_constants";
 
 export const AppFooter = React.memo(() => {
   return (
     <Footer>
-      <div
+      {/* <div
         style={{
           display: "flex",
           gap: ".5rem",
@@ -19,7 +19,7 @@ export const AppFooter = React.memo(() => {
         ) : (
           <EncryptedIcon />
         )}
-      </div>
+      </div> */}
     </Footer>
   );
 });

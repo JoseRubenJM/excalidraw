@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useCallbackRefState } from "../hooks/useCallbackRefState";
 import { t } from "../i18n";
 import {
-  useExcalidrawContainer,
+  // useExcalidrawContainer,
   useDevice,
   useExcalidrawSetAppState,
 } from "../components/App";
@@ -48,7 +48,7 @@ function getDialogSize(size: DialogSize): number {
 export const Dialog = (props: DialogProps) => {
   const [islandNode, setIslandNode] = useCallbackRefState<HTMLDivElement>();
   const [lastActiveElement] = useState(document.activeElement);
-  const { id } = useExcalidrawContainer();
+  // const { id } = useExcalidrawContainer();
   const device = useDevice();
 
   useEffect(() => {
@@ -108,11 +108,11 @@ export const Dialog = (props: DialogProps) => {
       closeOnClickOutside={props.closeOnClickOutside}
     >
       <Island ref={setIslandNode}>
-        {props.title && (
+        {/* {props.title && (
           <h2 id={`${id}-dialog-title`} className="Dialog__title">
             <span className="Dialog__titleContent">{props.title}</span>
           </h2>
-        )}
+        )} */}
         <button
           className="Dialog__close"
           onClick={onClose}

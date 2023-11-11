@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { DEFAULT_SIDEBAR, LIBRARY_SIDEBAR_TAB } from "../constants";
+// import { DEFAULT_SIDEBAR, LIBRARY_SIDEBAR_TAB } from "../constants";
 import { useTunnels } from "../context/tunnels";
 import { useUIAppState } from "../context/ui-appState";
 import { t } from "../i18n";
@@ -7,7 +7,7 @@ import { MarkOptional, Merge } from "../utility-types";
 import { composeEventHandlers } from "../utils";
 import { useExcalidrawSetAppState } from "./App";
 import { withInternalFallback } from "./hoc/withInternalFallback";
-import { LibraryMenu } from "./LibraryMenu";
+// import { LibraryMenu } from "./LibraryMenu";
 import { SidebarProps, SidebarTriggerProps } from "./Sidebar/common";
 import { Sidebar } from "./Sidebar/Sidebar";
 
@@ -20,11 +20,11 @@ const DefaultSidebarTrigger = withInternalFallback(
     const { DefaultSidebarTriggerTunnel } = useTunnels();
     return (
       <DefaultSidebarTriggerTunnel.In>
-        <Sidebar.Trigger
+        {/* <Sidebar.Trigger
           {...props}
           className="default-sidebar-trigger"
           name={DEFAULT_SIDEBAR.name}
-        />
+        /> */}
       </DefaultSidebarTriggerTunnel.In>
     );
   },
@@ -102,9 +102,9 @@ export const DefaultSidebar = Object.assign(
               )}
               <DefaultSidebarTabTriggersTunnel.Out />
             </Sidebar.Header>
-            <Sidebar.Tab tab={LIBRARY_SIDEBAR_TAB}>
+            {/* <Sidebar.Tab tab={LIBRARY_SIDEBAR_TAB}>
               <LibraryMenu />
-            </Sidebar.Tab>
+            </Sidebar.Tab> */}
             {children}
           </Sidebar.Tabs>
         </Sidebar>
